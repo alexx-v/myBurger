@@ -99,7 +99,6 @@ class BurgerBuilder extends Component {
 	};
 
 	purchaseHandler = () => {
-		console.log('BurgerBuilder -> purchaseHandler -> purchaseHandler');
 		this.setState({ purchasing: true });
 	};
 
