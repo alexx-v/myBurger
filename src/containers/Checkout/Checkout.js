@@ -20,12 +20,13 @@ class Checkout extends Component {
 		const ingredients = {};
 		let price = 0;
 		for (let param of query.entries()) {
-			if (!param[0] === 'price') {
-				ingredients[param[0]] = +param[1];
-			} else {
+			if (param[0] === 'price') {
 				price = param[1];
+			} else {
+				ingredients[param[0]] = +param[1];
 			}
 		}
+		console.log('Checkout ingredients:', ingredients);
 		this.setState({ ingredients, totalPrice: price });
 	}
 

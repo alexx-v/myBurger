@@ -6,7 +6,13 @@ import classes from './NavigationItem.module.css';
 function NavigationItem(props) {
 	return (
 		<li className={classes.NavigationItem}>
-			<NavLink to={props.link}>{props.children}</NavLink>
+			<NavLink
+				exact={props.exact}
+				activeClassName={classes.active}
+				to={props.link}
+			>
+				{props.children}
+			</NavLink>
 		</li>
 	);
 }

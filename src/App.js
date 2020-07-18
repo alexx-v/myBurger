@@ -11,8 +11,9 @@ function App() {
 		<div>
 			<Layout>
 				<Switch>
-					<Route path='/checkout' component={Checkout}></Route>
-					<Route path='/' component={BurgerBuilder}></Route>
+					<Route path='/checkout' component={Checkout} />
+					<Route path='/orders' component={Orders} />
+					<Route path='/' component={BurgerBuilder} />
 				</Switch>
 			</Layout>
 		</div>
