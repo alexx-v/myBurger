@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from '../../../axios-orders';
+import { connect } from 'react-redux';
 
 import classes from './ContactData.module.css';
 
@@ -47,6 +48,7 @@ class ContactData extends Component {
 					required: true,
 					minLength: 5,
 					maxLength: 5,
+					isNumeric: true,
 				},
 				valid: false,
 				touched: false,
@@ -73,6 +75,7 @@ class ContactData extends Component {
 				value: '',
 				validation: {
 					required: true,
+					isEmail: true,
 				},
 				valid: false,
 				touched: false,
@@ -107,11 +110,11 @@ class ContactData extends Component {
 		}
 
 		const order = {
-			ingredients: this.props.ingredients,
+			ingredients: this.props.ings,
 			price: this.props.price / 100,
 			orderData: formData,
 		};
-		console.log('ContactData ingredients:', order);
+		console.log('ContactData ings:', order);
 		axios
 			.post('/orders.json', order)
 			.then((response) => {
@@ -138,6 +141,16 @@ class ContactData extends Component {
 
 		if (rules.maxLength) {
 			isValid = value.length <= rules.maxLength && isValid;
+		}
+
+		if (rules.isEmail) {
+			const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+			isValid = pattern.test(value) && isValid;
+		}
+
+		if (rules.isNumeric) {
+			const pattern = /^\d+$/;
+			isValid = pattern.test(value) && isValid;
 		}
 
 		return isValid;
@@ -228,4 +241,11 @@ class ContactData extends Component {
 	}
 }
 
-export default ContactData;
+const mapStateToProps = (state) => {
+	return {
+		ings: state.ingredients,
+		price: state.totalPrice,
+	};
+};
+
+export default connect(mapStateToProps)(ContactData);
