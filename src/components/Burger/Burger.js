@@ -4,7 +4,7 @@ import classes from './Burger.module.css';
 
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
-/* const Burger = ({ ingredients }) => {
+const Burger = ({ ingredients }) => {
 	// Maps ingredients including their quantity.
 	let transformedIngredients = Object.keys(ingredients)
 		.map((igKey) => {
@@ -33,10 +33,8 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 export default Burger;
 
- */
-
+/*
 const burger = (props) => {
-	console.log('burger -> props', props);
 	let transformedIngredients = Object.keys(props.ingredients)
 		.map((igKey) => {
 			return [...Array(props.ingredients[igKey])].map((_, i) => {
@@ -58,4 +56,4 @@ const burger = (props) => {
 	);
 };
 
-export default burger;
+export default burger; */

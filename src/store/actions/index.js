@@ -3,4 +3,4 @@ export {
 	removeIngredient,
 	initIngredients,
 } from './burgerBuilder';
-export {} from './order.js';
+export { purchaseBurger, purchaseInit } from './order.js';
