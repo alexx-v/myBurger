@@ -3,4 +3,7 @@ export {
 	removeIngredient,
 	initIngredients,
 } from './burgerBuilder';
+
 export { purchaseBurger, purchaseInit, fetchOrders } from './order.js';
+
+export { auth } from './auth';
