@@ -34,7 +34,6 @@ export const initIngredients = () => {
 			.get('/ingredients.json')
 			.then((response) => dispach(setIngredients(response.data)))
 			.catch((error) => {
-				console.log('error:', error);
 				dispach(fetchIngredientsFailed());
 			});
 	};

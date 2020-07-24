@@ -23,7 +23,6 @@ export const purchaseBurgerStart = () => {
 };
 
 export const purchaseBurger = (orderData, token) => {
-	// console.log('purchaseBurger -> orderData', orderData);
 	return (dispatch) => {
 		dispatch(purchaseBurgerStart());
 		axios

@@ -11,7 +11,6 @@ const controls = [
 ];
 
 const BuildControls = (props) => {
-	// console.log(props.price);
 	return (
 		<div className={classes.BuidControls}>
 			<p>
