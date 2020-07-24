@@ -34,7 +34,7 @@ const Order = (props) => {
 		<div className={classes.Order}>
 			<p>Ingredients: {ingredientOutput}</p>
 			<p>
-				Price: <strong>{props.price}</strong>
+				Price: <strong>${props.price}</strong>
 			</p>
 		</div>
 	);
