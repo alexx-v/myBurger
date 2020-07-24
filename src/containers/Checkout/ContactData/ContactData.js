@@ -78,10 +78,10 @@ class ContactData extends Component {
 				},
 				value: '',
 				validation: {
-					required: false,
+					// required: false,
 					// isEmail: true,
 				},
-				valid: false,
+				valid: true,
 				touched: false,
 			},
 			deliveryMethod: {
