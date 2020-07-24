@@ -19,7 +19,7 @@ class ContactData extends Component {
 				elementType: 'input',
 				elementConfig: {
 					type: 'text',
-					placeholder: 'Your Name',
+					placeholder: 'Name',
 				},
 				value: '',
 				validation: {
@@ -28,11 +28,24 @@ class ContactData extends Component {
 				valid: false,
 				touched: false,
 			},
-			street: {
+			/* 			city: {
 				elementType: 'input',
 				elementConfig: {
 					type: 'text',
-					placeholder: 'Street',
+					placeholder: 'City',
+				},
+				value: '',
+				validation: {
+					required: true,
+				},
+				valid: false,
+				touched: false,
+			}, */
+			address: {
+				elementType: 'input',
+				elementConfig: {
+					type: 'text',
+					placeholder: 'Address',
 				},
 				value: '',
 				validation: {
@@ -41,31 +54,18 @@ class ContactData extends Component {
 				valid: false,
 				touched: false,
 			},
-			zipCode: {
-				elementType: 'input',
+			phone: {
+				elementType: 'tel',
 				elementConfig: {
 					type: 'text',
-					placeholder: 'ZIP Code',
+					placeholder: 'Phone Number',
 				},
 				value: '',
 				validation: {
 					required: true,
-					minLength: 5,
-					maxLength: 5,
+					// minLength: 5,
+					// maxLength: 5,
 					isNumeric: true,
-				},
-				valid: false,
-				touched: false,
-			},
-			country: {
-				elementType: 'input',
-				elementConfig: {
-					type: 'text',
-					placeholder: 'Country',
-				},
-				value: '',
-				validation: {
-					required: true,
 				},
 				valid: false,
 				touched: false,
@@ -74,12 +74,12 @@ class ContactData extends Component {
 				elementType: 'input',
 				elementConfig: {
 					type: 'email',
-					placeholder: 'Your E-Mail',
+					placeholder: 'E-Mail',
 				},
 				value: '',
 				validation: {
-					required: true,
-					isEmail: true,
+					required: false,
+					// isEmail: true,
 				},
 				valid: false,
 				touched: false,

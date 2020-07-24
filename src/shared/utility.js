@@ -17,6 +17,11 @@ export const checkValidity = (value, rules) => {
 		isValid = value.length <= rules.maxLength && isValid;
 	}
 
+	// if (rules.isPhone) {
+	// 	const pattern = /[0-9]{3}-[0-9]{3}-[0-9]{4}/;
+	// 	isValid = pattern.test(value) && isValid;
+	// }
+
 	if (rules.isEmail) {
 		const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 		isValid = pattern.test(value) && isValid;
