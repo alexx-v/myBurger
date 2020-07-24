@@ -27,6 +27,9 @@
 }
 
 .Logo {
+	position: relative;
+	left: -8px;
+	display: inline-block;
 	/* height: 11%; */
 	height: 50px;
 	margin-bottom: 32px;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import classes from './SideDrawer.module.css';
 
@@ -19,7 +20,9 @@ function SideDrawer(props) {
 			<Backdrop show={props.open} clicked={props.closed} />
 			<div className={attachedClasses.join(' ')} onClick={props.closed}>
 				<div className={classes.Logo}>
-					<Logo />
+					<Link to='/'>
+						<Logo />
+					</Link>
 				</div>
 				<nav>
 					<NavigationItems isAuthenticated={props.isAuth} />

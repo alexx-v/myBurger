@@ -19,20 +19,22 @@ const Order = (props) => {
 				style={{
 					textTransform: 'capitalize',
 					display: 'inline-block',
-					margin: '0 8px',
+					marginRight: '8px',
 					border: '1px solid #ccc',
 					padding: '5px',
+					marginBottom: '15px',
 				}}
 				key={ig.name}
 			>
-				{ig.name} ({ig.amount})
+				{ig.name} - {ig.amount}
 			</span>
 		);
 	});
 
 	return (
 		<div className={classes.Order}>
-			<p>Ingredients: {ingredientOutput}</p>
+			<p>Ingredients:</p>
+			{ingredientOutput}
 			<p>
 				Price: <strong>${props.price}</strong>
 			</p>
