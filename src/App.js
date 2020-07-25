@@ -7,10 +7,6 @@ import * as actions from './store/actions/';
 import Layout from './hoc/Layout/Layout';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 import Spinner from './components/UI/Spinner/Spinner';
-// import Checkout from './containers/Checkout/Checkout';
-// import Orders from './containers/Orders/Orders'
-// import Auth from './containers/Auth/Auth';
-// import Logout from './containers/Auth/Logout/Logout';
 
 const Auth = lazy(() => import('./containers/Auth/Auth'));
 const Checkout = lazy(() => import('./containers/Checkout/Checkout'));
