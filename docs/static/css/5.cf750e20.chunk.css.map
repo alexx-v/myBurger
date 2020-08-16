@@ -1,0 +1,1 @@
+{"version":3,"sources":["Order.module.css"],"names":[],"mappings":"AAAA,oBACC,YAAa,CACb,gBAAiB,CACjB,SAAU,CACV,qBAAsB,CACtB,yBAA0B,CAC1B,qBACD","file":"5.cf750e20.chunk.css","sourcesContent":[".Order {\r\n\tpadding: 10px;\r\n\tmargin: 10px auto;\r\n\twidth: 80%;\r\n\tborder: 1px solid #eee;\r\n\tbox-shadow: 0 2px 3px #ccc;\r\n\tbox-sizing: border-box;\r\n}\r\n"]}
